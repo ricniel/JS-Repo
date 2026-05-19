@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step 9 — Final Project: Random Header + Random Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!--
+    The header has NO inline style for background-image.
+    JavaScript sets it on every page load, picking randomly from the 20 images.
+    Reload the page a few times — the banner changes each time.
+  -->
+  <header id="siteHeader">
+    <h1>My Random Photo Site</h1>
+    <p>Reload the page to see a different header. Click the button to reshuffle the gallery.</p>
+  </header>
+
+  <main>
+    <section class="gallery-controls">
+      <button id="shuffleBtn">Shuffle the gallery</button>
+    </section>
+
+    <!--
+      Five empty <img> tags. JavaScript fills in BOTH the src AND the alt
+      attribute for each one. The alt text comes from the `images` array in
+      script.js, so each picture's description travels with the picture
+      even though the gallery is randomly shuffled.
+
+      The initial alt="" is intentional. It stops screen readers from
+      announcing "image" before the JS has had a chance to fill things in.
+    -->
+    <section class="gallery">
+      <img class="gallery-img" alt="">
+      <img class="gallery-img" alt="">
+      <img class="gallery-img" alt="">
+      <img class="gallery-img" alt="">
+      <img class="gallery-img" alt="">
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
